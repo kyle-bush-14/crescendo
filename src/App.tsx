@@ -82,8 +82,10 @@ const App: FC = () => {
             />
           </motion.div>
 
-          <section className="min-h-0 flex-1 rounded-3xl border border-white/10 bg-white/5 p-3 sm:p-4">
-            <GuessChart guesses={guesses} failedIndex={failedIndex} />
+          <section className="relative min-h-0 flex-1 rounded-3xl border border-white/10 bg-white/5">
+            <div className="absolute inset-0 p-3 sm:p-4">
+              <GuessChart guesses={guesses} failedIndex={failedIndex} />
+            </div>
           </section>
         </div>
       )}
